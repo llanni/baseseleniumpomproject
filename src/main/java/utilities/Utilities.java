@@ -212,9 +212,5 @@ public class Utilities {
     To quickly test utilities methods
      */
     public static void main (String[] args) throws Exception {
-        TestConfig config = new TestConfig(false);
-        System.out.println("value of api key id with lowest usage: " + config.getApiKey());
-        //int cUs = Utilities.getCurrentEmailUsage(config.getChromeDriver(), config, 1 );
-        //System.out.println("Current email usage is: " + cUs);
     }
 }
