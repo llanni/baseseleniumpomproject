@@ -1,11 +1,5 @@
 package pages.shop;
 
-import static org.assertj.core.api.Assertions.assertThat;
-/*
-    import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
- */
-
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -46,7 +40,7 @@ public class HomePage extends BasePage {
 		wait.until(ExpectedConditions.urlContains(homepageUrl));
 
 		// make sure the page content is loaded properly
-		wait.until(ExpectedConditions.presenceOfElementLocated((config.getLocator("homepage.videoList"))));
+		// wait.until(ExpectedConditions.presenceOfElementLocated((config.getLocator("homepage.videoList"))));
 
 		// TODO: improve this -- this is to fix a random failing due probably of some
 		// dynamic content not loaded - add a proper wait();
@@ -56,10 +50,12 @@ public class HomePage extends BasePage {
 		// driver.findElement(config.getLocator("homepage.watchContactBanner"));
 		// verify the contact us is there - important element
 
-		this.contactUsSelector = driver.findElement(config.getLocator("homepage.contactus"));
-		String contactUsEmail = config.getData("homepage.contactus.email");
-		assertThat(contactUsSelector.getAttribute("href").trim().toLowerCase().contains(contactUsEmail.toLowerCase()))
-				.isTrue().withFailMessage("The contact us email does not point to mailto: " + contactUsEmail);
+		// this.contactUsSelector =
+		// driver.findElement(config.getLocator("homepage.contactus"));
+		// String contactUsEmail = config.getData("homepage.contactus.email");
+		// assertThat(contactUsSelector.getAttribute("href").trim().toLowerCase().contains(contactUsEmail.toLowerCase()))
+		// .isTrue().withFailMessage("The contact us email does not point to mailto: " +
+		// contactUsEmail);
 	}
 
 	// get the page title

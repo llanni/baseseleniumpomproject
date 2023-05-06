@@ -6,6 +6,16 @@ The project is delivered as a Maven project, any text editor can be used to edit
 If using Eclipse, starting from a workspace, select import existing maven project and point it to the root folder of the project.
 The test cases are meant to run on Chrome with Chrome Driver, both in desktop (full screen mode) and mobile mode (the window is smaller than the breaking point, to trigger Mobile responsive design), despite it is possible to modify/extend the code to support any existing browser.
 
+The project is containing basic testing against the Saucelab testing eCommerce web app called Swag Labs, which is assumed to be installed and running on localhost at port 3000 (as it defaults).
+Swag Labs can be downloaded from here:
+https://github.com/saucelabs/sample-app-web
+And installed locally following the instructions in the README.md file.
+
+Or also the same web application is available online at:
+https://www.saucedemo.com/
+
+In this case please remember to update the homepage.url property in the pom.xml file.
+
 2. Prerequirements:
 a) Java 1.8.x
 b) Maven (configured properly with Java)

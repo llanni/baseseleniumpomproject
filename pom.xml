@@ -110,8 +110,8 @@
         <mobile.mode.x>400</mobile.mode.x>
         <mobile.mode.y>900</mobile.mode.y>
 
-        <!-- Base url-->
-        <homepage.url>ADD BASIC URL HERE e.g. https://beta.dreamingspanish.com/</homepage.url>
+        <!-- Base url - ADD BASIC URL HERE e.g. https://beta.dreamingspanish.com/ -->
+        <homepage.url>http://localhost:3000/</homepage.url>
 
         <!-- POM Locators - make sure for each property, you both mobile and desktop versions (locator way can be different) even if the values are the same-->
         <!-- name convention: <pageName>.<locator>.<testingType>.<locatorType> -->
