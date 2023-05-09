@@ -108,8 +108,6 @@
         <!-- <testingType> = ( mobile | desktop ) -->
         <!-- <locatorType> = ( id | xpath | css | name ) -->
         <!-- POM Locators - Page 1 -->
-        <homepage.watchContactBanner.desktop.id>main-nav</homepage.watchContactBanner.desktop.id>
-        <homepage.videolist.all.items.desktop.xpath>//div[contains(@class,"col-12 col-sm-6 col-lg-4")]//div[contains(@class,"card-footer")]</homepage.videolist.all.items.desktop.xpath>
 
         <!-- POM Locators - LoginPage -->
         <loginpage.usernameField.desktop.id>user-name</loginpage.usernameField.desktop.id>
@@ -118,10 +116,7 @@
   
         <!-- Other parameters -->
 
-        <!-- TC1 parameters -->
-        
-        <login.testcase.email>6b681de0-0296-4074-bef1-8b5936e13428@mailslurp.com</login.testcase.email>
-        <login.testcase.name>caCNATGk</login.testcase.name>
+        <!-- Test Cases parameters -->
 
         <!-- Assertions -->
     </properties>

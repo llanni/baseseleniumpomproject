@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import config.TestConfig;
 
 public class BaseTest {
-	// base test containing setup, constructor and teardown methods to be handlded
+	// base test containing setup, constructor and teardown methods to be handled
 	// by all test cases;
 	// all test cases must extend the BaseTest
 

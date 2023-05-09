@@ -15,8 +15,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import config.TestConfig;
-
 /*
 Class containing utilities methods, available for the whole project
  */
@@ -132,38 +130,12 @@ public class Utilities {
 	}
 
 	// check if a String is numeric
-
 	public static boolean isNumeric(String strNum) {
 		Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
 		if (strNum == null) {
 			return false;
 		}
 		return pattern.matcher(strNum).matches();
-	}
-
-	/*
-	 * Verify if a user is logged in or not
-	 */
-	public static boolean verifyUserIsLoggedIn(WebDriver driver, TestConfig config, String userName) throws Exception {
-		try {
-			WebElement verificationPopup = driver
-					.findElement(config.getLocator("registrationpanel.verification.popup.title"));
-			if (verificationPopup.isDisplayed())
-				return false;
-		} catch (Exception e) {
-			// do nothing;
-		}
-
-		boolean mobileTesting = config.isMobileModeEnabled();
-		if (mobileTesting) {
-			// test on mobile
-			return !Utilities.isUIshowingText(driver, config.getData("homepage.register.motivation.message"))
-					&& driver.findElement(config.getLocator("homepage.watched.word")).isDisplayed();
-		} else {
-			// test on desktop
-			return Utilities.isUIshowingText(driver, userName)
-					&& driver.findElement(config.getLocator("homepage.watched.word")).isDisplayed();
-		}
 	}
 
 	// calculate diff in days between two Calendar dates
@@ -205,7 +177,7 @@ public class Utilities {
 	}
 
 	/*
-	 * To quickly test utilities methods
+	 * To quickly test utilities methods, if needed
 	 */
 	public static void main(String[] args) throws Exception {
 	}
