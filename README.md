@@ -1,5 +1,4 @@
-
-# 1. Abstract:
+# 1. Abstract
 This project (downloadable from git) is a template to generate UI E2E test cases against Web Applications (on the internet or on local) using Selenium and the Page Object Model (POM) design pattern.
 It can be used as the starting point to create a test automation suite to test any web application (also covering the mobile part, if the application supports responsive design).
 The project is delivered as a Maven project, any text editor can be used to edit it as well as any IDE like Eclipse or IntelliJ.
@@ -16,7 +15,7 @@ https://www.saucedemo.com/
 
 In this case please remember to update the `homepage.url` property in the pom.xml file accordingly.
 
-# 2. Prerequirements:
+# 2. Prerequirements
 - Java 1.8.x
 - Maven (configured properly with Java)
 - Internet connection
@@ -27,7 +26,7 @@ In this case please remember to update the `homepage.url` property in the pom.xm
 # 3. Installation
 - Checkout/download the project from the git repository into a root folder
 
-# 4. To run the test cases:
+# 4. To run the test cases
 - Open a Command Line
 - Go where this project was checked out (root folder)
 - Run 
@@ -37,7 +36,7 @@ In this case please remember to update the `homepage.url` property in the pom.xm
 The command will compile and build the project and run all the test cases.
 The screen command line output will provide the test logs and information
 
-# 5. Some information:
+# 5. Some information
 - The `/README.md` is this current file
 - The `/pom.xml` files contains the project information, Maven repository, all the dependencies (required external libraries) as well as the plugins and the properties.
 The properties section contains all the locators as well as some configuration parameters.
@@ -68,7 +67,7 @@ mvn surefire-report:report
 ```
 A HTML report should be generated in `/target/site/surefire-report.html` and can be read using any browser (please remember to manually clean the folder if nededed before any new run).
 
-# 7. Important notes:
+# 7. Important notes
 - Make sure to use latest Chrome Driver (at least 2.43.0) and Chrome (at least 70.0)
 - The properties inside props.properties file are self explaining, the most important one is probably:
 `test.mobile.mode.enabled=false`
