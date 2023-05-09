@@ -4,7 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.Test;
 
-import pages.shop.HomePage;
+import pages.shop.LoginPage;
 import test.BaseTest;
 import utilities.Utilities;
 
@@ -20,29 +20,17 @@ public class FirstTest extends BaseTest {
 	public void testLoginUser() throws Exception {
 		// 1. Navigate to Dreaming Spanish homepage
 		System.out.println("1. Navigate to the homepage");
-		HomePage homePage = new HomePage(driver, config);
+		LoginPage loginPage = new LoginPage(driver, config);
 
-		// 1.1 Verify loaded page title is
-		System.out.println("1.1 Verify title");
-		String expectedTitle = "Swag Labs";
-		String actualTitle = homePage.getPageTitle();
-		assertThat(actualTitle.equals(expectedTitle)).isTrue().withFailMessage(
-				"Actual and Expected Title ar different! Actual: " + actualTitle + ", Expected: " + expectedTitle);
-		Utilities.pauseExecution(3000);
+		// 2. Perform login with right username and password
+		String username = "standard_user";
+		String password = "secret_sauce";
+		loginPage.doLogin(username, password);
 
-		// 2. On the right top corner of the page, click on “Login”
-		// System.out.println("2. Click the Register link ");
-		// RegisterLoginPopupPage registerLoginPopupPage =
-		// homePage.clickRegisterButton();
-		// assertThat(registerLoginPopupPage.isUIinRegisterPanel()).isTrue().withFailMessage("Expected
-		// to be in the Registration panel, while it is not");
-
-		// 3. Switch to Login Tab
-		// System.out.println("3. Switch to Login Tab ");
-		// registerLoginPopupPage.clickToLoginPanel();
-		// Utilities.pauseExecution(200);
-		// assertThat(registerLoginPopupPage.isUIinLoginPanel()).isTrue().withFailMessage("Expected
-		// to be in the Login panel, while it is not");
+		// 3. Check the url contains inventory
+		System.out.println("3. Check the url contains inventory");
+		assertThat(driver.getCurrentUrl().contains("inventory")).isTrue().withFailMessage(
+				"Expected to be in the inventory page and it is not, the current url is: " + driver.getCurrentUrl());
 
 		// 4. Insert email and submit
 		// String registeredEmail = config.getData("login.testcase.email");
@@ -57,6 +45,7 @@ public class FirstTest extends BaseTest {
 		// 5. ...
 
 		// 6. Finished
+		Utilities.pauseExecution(2000);
 		System.out.println("6. End");
 
 	}

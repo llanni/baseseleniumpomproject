@@ -21,7 +21,6 @@ POM (Page Object Model) of the HomePage
 public class HomePage extends BasePage {
 	// define UI object as WebElements
 	private WebElement topicSelector;
-	private WebElement contactUsSelector;
 
 	// TODO add remaining needed UI elements
 
