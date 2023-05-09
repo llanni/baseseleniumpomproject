@@ -1,5 +1,5 @@
-#####
-1. Abstract:
+
+# 1. Abstract:
 This project (downloadable from git) is a template to generate UI E2E test cases against Web Applications (on the internet or in local) using Selenium and the Page Object Model (POM).
 It can be used as the starting point to create a test automation suite to test any web application (also covering the mobile part if the application supports responsive design).
 The project is delivered as a Maven project, any text editor can be used to edit it as well as any IDE like Eclipse or IntelliJ.
@@ -16,35 +16,41 @@ https://www.saucedemo.com/
 
 In this case please remember to update the homepage.url property in the pom.xml file.
 
-2. Prerequirements:
+# 2. Prerequirements:
 a) Java 1.8.x
 b) Maven (configured properly with Java)
 c) Internet connection
 d) Google Chrome browser
-e) Selenium Chrome Driver (download here: http://chromedriver.chromium.org/downloads and unzip and store somewhere safe the executable)
+e) Selenium Chrome Driver (download here: `http://chromedriver.chromium.org/downloads` and unzip and store somewhere safe the executable)
 d) *IMPORTANT:* please provide the selenium chrome driver full path (from step 7) into the pom.xml file, at the property "selenium.chrome.driver.executable.path" (see the current property value for an example).
 
-3. Installation
+# 3. Installation
 a) download the project from the git repository into a root folder
 
-4. To run the test cases:
+# 4. To run the test cases:
 a) Open a Command Line
 b) Go where this project was checked out (root folder);
-c) Run "mvn clean verify" > The command will compile and build the project and run all the test cases.
+c) Run 
+```
+"mvn clean verify"
+```
+The command will compile and build the project and run all the test cases.
 The screen command line output will provide the test logs and information
 
-5. Some information:
+# 5. Some information:
 - The /README.md is this current file
 - The /pom.xml files contains the project information, Maven repository, all the dependencies (required external libraries) as well as the plugins and the properties.
 The properties section contains all the locators as well as some configuration parameters.
-- The test cases are in the packages: /src/test/java/test/ui/, all exstending a BaseTest in /src/test/java/test, that can contain common features. 
+- The test cases are in the packages: `/src/test/java/test/ui/`, all exstending a BaseTest in `/src/test/java/test`, that can contain common features. 
 Each test cases is a sequence of interactions with the UI calling the API of the interacted pages via the corrispective POMs, and doing assertions on the content to match the expected one (via JUnit assertions)
-More test cases can be created in the /src/test/java/test/ui/
+More test cases can be created in the `/src/test/java/test/ui/`
 - The resource folder contains the props.properties with all the project properties; the properties are dynamically read from the pom.xml file in the project root, so properties must be edited in the pom exclusively; it is possible to override from commandline any pom.mxl property by adding in the mvn command the following:
+```
 -D<propName>=<propValue>
-- The package /src/main/java/config contains a test configuration file to read the property file and handle chrome driver and both Mobile and Desktop mode
-- The package /src/main/java/pages/shop contains the Page Object Model (POM) of the page(s) needed in test cases, all extending a BasePage inside /src/main/java/pages/ that should contain common UI elements over all the pages;
-- The package /src/main/java/utilities contains some utility methods that can be commonly used in all the Test Cases or POM Classes
+```
+- The package `/src/main/java/config` contains a test configuration file to read the property file and handle chrome driver and both Mobile and Desktop mode
+- The package `/src/main/java/pages/shop` contains the Page Object Model (POM) of the page(s) needed in test cases, all extending a BasePage inside `/src/main/java/pages/` that should contain common UI elements over all the pages;
+- The package `/src/main/java/utilities` contains some utility methods that can be commonly used in all the Test Cases or POM Classes
 
 A Test Case extends the BaseTest classes. The BaseTest connects a Test Case with a WebDriver and a TestConfig (configuration).
 The WebDriver object is used to connect to a specific browser driver (e.g. Chrome Driver), the TestConfig is used as an object to specify parameters to customise the test execution, and it is the place where a new WebDriver for other browsers can be generated, specifying all the needed capabilities.
@@ -55,9 +61,9 @@ If the constructor does not file, the page is properly linked to the POM, and th
 For a simplicity matter, there are no common Test Steps (a common sequence of steps that is used by different test cases), this can be created extending the project.
 TODO: add how JUnit works in terms of test executions, reports etc.
 
-6. Important note:
+# 6. Important note:
 - Make sure to use latest Chrome Driver (at least 2.43.0) and Chrome (at least 70.0)
 - The properties inside props.properties file are self explaining, the most important one is probably:
-test.mobile.mode.enabled=false
+`test.mobile.mode.enabled=false`
 which decide if the test is run in mobile (true) or dekstop (false) mode
 
