@@ -1,9 +1,9 @@
 package test;
 
-import org.junit.After;
-import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 
 import config.TestConfig;
 
@@ -23,7 +23,7 @@ public class BaseTest {
 		this.wait = new WebDriverWait(this.driver, this.config.getPageWaitTimeout());
 
 		// print config info
-		System.out.println(config.getConfigInfo());
+		// System.out.println(config.getConfigInfo());
 	}
 
 	// constructor creating a new config (desktop mode) and generated driver
@@ -33,7 +33,7 @@ public class BaseTest {
 		this.wait = new WebDriverWait(this.driver, this.config.getPageWaitTimeout());
 
 		// print config info
-		System.out.println(config.getConfigInfo());
+		// System.out.println(config.getConfigInfo());
 	}
 
 	// constructor creating a new config (specifying the mode) and generatic driver
@@ -43,10 +43,10 @@ public class BaseTest {
 		this.wait = new WebDriverWait(this.driver, this.config.getPageWaitTimeout());
 
 		// print config info
-		System.out.println(config.getConfigInfo());
+		// System.out.println(config.getConfigInfo());
 	}
 
-	@Before
+	@BeforeSuite
 	// insert things to do before starting any test
 	public void setUp() {
 		try {
@@ -56,7 +56,7 @@ public class BaseTest {
 		}
 	}
 
-	@After
+	@AfterSuite
 	// insert things to do after closing all tests
 	public void tearDown() {
 		// close any driver instance, if needed

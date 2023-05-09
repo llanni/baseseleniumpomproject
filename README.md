@@ -47,6 +47,7 @@ More test cases can be created in the `/src/test/java/test/ui/`
 ```
 -D<propName>=<propValue>
 ```
+- The `/testng.xml` files contains the configuration to decide which tests to run (using TestNG) and if running them in parallel
 - The package `/src/main/java/config` contains a test configuration file to read the property file and handle the Chrome driver and both Mobile and Desktop mode
 - The package `/src/main/java/pages/shop` contains the Page Object Model (POM) of the page(s) needed in test cases, all extending a BasePage inside `/src/main/java/pages/` that should contain common UI elements over all the pages;
 - The package `/src/main/java/utilities` contains some utility methods that can be commonly used in all the Test Cases or POM Classes
