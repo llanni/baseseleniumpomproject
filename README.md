@@ -61,7 +61,14 @@ If the constructor does not fail throwing an Exception, this means that the page
 For a simplicity matter, there are no common Test Steps (a common sequence of steps that is used by different test cases), this can be created extending the project.
 As well, there is at the moment no proper logger installed (like Log4j 2) and any information will be writte on the System.out, it is obviously possible to add any better logging mechanism.
 
-# 6. Important note:
+# 6. Reporting
+To generate a test report, the Surefie plugin is used, and it gan generate a report by using its standalone goal in the command line, from the root folder:
+```
+mvn surefire-report:report
+```
+A HTML report should be generated in `/target/site/surefire-report.html` and can be read using any browser (please remember to manually clean the folder if nededed before any new run).
+
+# 7. Important notes:
 - Make sure to use latest Chrome Driver (at least 2.43.0) and Chrome (at least 70.0)
 - The properties inside props.properties file are self explaining, the most important one is probably:
 `test.mobile.mode.enabled=false`
