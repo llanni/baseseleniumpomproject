@@ -17,20 +17,20 @@ https://www.saucedemo.com/
 In this case please remember to update the homepage.url property in the pom.xml file.
 
 # 2. Prerequirements:
-a) Java 1.8.x
-b) Maven (configured properly with Java)
-c) Internet connection
-d) Google Chrome browser
-e) Selenium Chrome Driver (download here: `http://chromedriver.chromium.org/downloads` and unzip and store somewhere safe the executable)
-d) *IMPORTANT:* please provide the selenium chrome driver full path (from step 7) into the pom.xml file, at the property "selenium.chrome.driver.executable.path" (see the current property value for an example).
+- Java 1.8.x
+- Maven (configured properly with Java)
+- Internet connection
+- Google Chrome browser
+- Selenium Chrome Driver (download here: `http://chromedriver.chromium.org/downloads` and unzip and store somewhere safe the executable)
+- *IMPORTANT:* please provide the selenium chrome driver full path (from step 7) into the pom.xml file, at the property "selenium.chrome.driver.executable.path" (see the current property value for an example).
 
 # 3. Installation
-a) download the project from the git repository into a root folder
+- Download the project from the git repository into a root folder
 
 # 4. To run the test cases:
-a) Open a Command Line
-b) Go where this project was checked out (root folder);
-c) Run 
+- Open a Command Line
+- Go where this project was checked out (root folder);
+- Run 
 ```
 "mvn clean verify"
 ```
