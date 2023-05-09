@@ -196,7 +196,6 @@ public class TestConfig {
 		info = info + "*** Test Configuration information *******************************" + "\n";
 		info = info + "* - Mobile mode enabled:   " + this.isMobileModeEnabled() + "\n";
 		info = info + "* - Headless mode enabled:     " + this.isHeadlessModeEnabled() + "\n";
-		info = info + "* - Skip MailSlurp sync:     " + this.getData("mailslurp.synch.execute") + "\n";
 		info = info + "* - Max waiting time for a page (secs):    " + this.getPageWaitTimeout() + "\n";
 		// hard-coded for the moment we only test against Chrome
 		info = info + "* - Browser and Driver:    Chrome and ChromeDriver" + "\n";
