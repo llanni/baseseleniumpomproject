@@ -1,7 +1,7 @@
 package pages.shop;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -15,7 +15,7 @@ POM (Page Object Model) of the HomePage
  */
 public class HomePage extends BasePage {
 	// define UI object as WebElements
-	private WebElement topicSelector;
+	// private WebElement topicSelector;
 
 	// TODO add remaining needed UI elements
 

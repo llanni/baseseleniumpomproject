@@ -31,6 +31,7 @@ public class LoginSeleniumIDETest {
 		driver = new ChromeDriver();
 		js = (JavascriptExecutor) driver;
 		vars = new HashMap<String, Object>();
+
 	}
 
 	@AfterTest
@@ -40,6 +41,7 @@ public class LoginSeleniumIDETest {
 
 	@Test(groups = { "old" })
 	public void login() {
+		System.out.println("vars os empty: " + vars.isEmpty());
 		driver.get("http://localhost:3000/");
 		driver.manage().window().setSize(new Dimension(1350, 637));
 		driver.findElement(By.id("login_credentials")).click();
