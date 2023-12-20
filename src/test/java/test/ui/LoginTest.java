@@ -25,7 +25,7 @@ public class LoginTest extends BaseTest {
 
 		// 3. Verify the user has correctly logged in
 		System.out.println("A2. Verify the user has correctly logged in");
-		Assert.assertEquals(driver.getCurrentUrl().contains("inventory"), true);
+		Assert.assertTrue(driver.getCurrentUrl().contains("inventory"));
 		// assertThat(driver.getCurrentUrl().contains("inventory")).isTrue().withFailMessage(
 		// "Expected to be in the inventory page and it is not, the current url is: " +
 		// driver.getCurrentUrl());

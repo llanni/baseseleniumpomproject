@@ -40,8 +40,6 @@
 		</dependency>
     </dependencies>
 
-
-
     <build>
         <plugins>
             <plugin>
@@ -90,13 +88,14 @@
 
     <properties>
         <!-- Compiler source and target info -->
+        <!-- Change accordingly to your  Java version -->
          <maven.compiler.source>19</maven.compiler.source> 
          <maven.compiler.target>19</maven.compiler.target>
         <!-- Configuration -->
 
         <!-- Selenium Chrome Driver path to executable. Adjust it to your actual location -->
-        <selenium.chrome.driver.executable.path>/Users/leonardolanni/Downloads/chromedriver_113_m1</selenium.chrome.driver.executable.path>
-        <selenium.chrome.driver.headless.mode>true</selenium.chrome.driver.headless.mode>
+        <selenium.chrome.driver.executable.path>/Users/leonardolanni/Downloads/chromedriver_120_m1</selenium.chrome.driver.executable.path>
+        <selenium.chrome.driver.headless.mode>false</selenium.chrome.driver.headless.mode>
         <page.wait.timeout.seconds>10</page.wait.timeout.seconds>
        
         <!-- #enable or disable mobile mode; if enabled, minimise the screen size to the following x-y values, otherwise max -->
@@ -111,13 +110,14 @@
         <!-- name convention: <pageName>.<locator>.<testingType>.<locatorType> -->
         <!-- <testingType> = ( mobile | desktop ) -->
         <!-- <locatorType> = ( id | xpath | css | name ) -->
-        <!-- POM Locators - Page 1 -->
 
         <!-- POM Locators - LoginPage -->
         <loginpage.usernameField.desktop.id>user-name</loginpage.usernameField.desktop.id>
         <loginpage.passwordField.desktop.id>password</loginpage.passwordField.desktop.id>
         <loginpage.submitButton.desktop.id>login-button</loginpage.submitButton.desktop.id>
   
+        <!-- POM Locators - HomePage -->
+
         <!-- Other parameters -->
 
         <!-- Test Cases parameters -->

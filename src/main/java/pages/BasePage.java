@@ -11,6 +11,7 @@ public class BasePage {
 	public TestConfig config;
 
 	public BasePage(WebDriver driver, TestConfig config) {
+		
 		this.driver = driver;
 		this.config = config;
 	}
